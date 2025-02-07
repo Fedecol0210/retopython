@@ -21,4 +21,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Comando por defecto para iniciar el servidor de desarrollo de Django
-CMD ["python", "API_VULNERABILIDAD/app/manage.py", "runserver", "127.0.0.1:8000"]
+CMD ["python", "manage.py", "runserver", "127.0.0.1:8000", "--settings=vul.settings"]

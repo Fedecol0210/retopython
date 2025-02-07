@@ -9,8 +9,8 @@ class Command (BaseCommand):
     def handle(self, *args, **options):
         url = 'https://services.nvd.nist.gov/rest/json/cves/2.0'
         params = {
-            'resultsPerPage': '6',
-            'startIndex': '0'
+            'resultsPerPage': '3',
+            'startIndex': '3'
         }
         response = requests.get(url, params=params)
         if response.status_code == 200:

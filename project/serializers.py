@@ -6,6 +6,14 @@ class vulnerabilityserializers(serializers.ModelSerializer):
         model = Vulnerabilidad
         fields = '__all__' 
 
+
+    def validate_cve_id(self, value):
+        if ',' in value:
+            raise serializers.ValidationError("no se puede utilizar ,")
+        return value
+
+        
+
 class vulnerabilityserializersfilter(serializers.ModelSerializer):
     class Meta:
         model = Vulnerabilidad

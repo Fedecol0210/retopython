@@ -1,9 +1,9 @@
-version: '3.8'
+##version: '3.8'
 
 services:
   django:
     build: .
-    command: python manage.py runserver 127.0.0.1:8000
+    command: python manage.py runserver --settings=vul.settings
     volumes:
       - .:/app
     ports:
